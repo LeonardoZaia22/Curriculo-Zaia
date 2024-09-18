@@ -4,269 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Currículo</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <div class="container-fluid">
+<div class="container-fluid">
     <header>
+        <!-- Menu de navegação-->
+        <nav class="navbar navbar-dark navbar-custom fixed-top" style="background-color: #a89c8d;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Currículo de Leonardo Zaia</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quemsoueu">Sobre mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#parte2">Experiências</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#parte3">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#parte4">Educação</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Menu de navegação-->
-    <nav class="navbar navbar-dark navbar-custom fixed-top" style="background-color: #a89c8d;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Currículo de Leonardo Zaia</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" href="#quemsoueu">Sobre mim</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#parte2">Experiências</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#parte3">Habilidades</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#parte4">Educação</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  
+    <!-- aqui é o css -->
+    <style>
+        body {
+            margin: 45px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
 
-<!-- aqui é o css -->
-  <style>
-  body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      color: #4a4a4a;
-    }
+        .navbar-custom {
+            background-color: #a89c8d; 
+        }
 
-  /* cor do navbar */
-  .navbar-custom {
-      background-color: #a89c8d; 
-  }
+        .header {
+            text-align: center;
+        }
 
-  .main-content {
-      display: flex;
-      align-items: center;
-      padding: 50px;
-      background-color: #f9f9f9;
-      animation: fadeIn 2s;
-  }
-/* 
-aqui é a config do menu */
-  .navbar-brand {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-/* aqui é o tempo de decida do menu */
-  .navbar-collapse {
-    transition: height 0.9s ease-in-out;
-  }
+        img {
+            margin-top: 8px;
+            border-radius: 6%;
+            object-fit: cover;
+            height: 300px;
+            width: 290px;
+        }
 
-  .header {
-      text-align: center;
-  }
+        .parte2 h2, .parte3 h2, .parte4 h2, .parte5 h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin: 10px 0;
+            text-align: center;
+        }
 
-  /* Imagens redondas */
-  img {
-    margin-top: 8px;
-      border-radius: 6%;
-      object-fit: cover;
-      height: 300px;
-      width: 290px;
-  }
-/* config da parte 2 e 3 */
-  .parte2 h2, .parte3 h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin: 10px 0;
-      text-align: center;
-  }
+        .container {
+            display: flex;
+            background-color: #f8f4f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 70px;
+        }
 
-  .container {
-      display: flex;
-      background-color: #f8f4f0;
-      padding: 20px;
-      border-radius: 8px;
-  }
+        .image-section {
+            flex: 1;
+            padding-right: 20px;
+        }
 
-  .image-section {
-      flex: 1;
-      padding-right: 20px;
-  }
+        .text-section h1 {
+            font-size: 35px;
+            color: #3e3e3e;
+            margin: 10px 0;
+        }
 
-  .text-section {
-      flex: 1;
-      padding-left: 20px;
-  }
-/* config do h2*/
-  .text-section h2 {
-      font-size: 24px;
-      color: #a89c8d;
-      letter-spacing: 2px;
-      margin: 0;
-  }
-/* config do h1 */
-  .text-section h1 {
-      font-size: 36px;
-      color: #3e3e3e;
-      margin: 10px 0;
-  }
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            .image-section {
+                padding-right: 0;
+            }
+        }
 
-  .text-section p {
-      font-size: 16px;
-      color: #3e3e3e;
-      line-height: 1.6;
-  }
+        .linha-preta {
+            height: 2px;
+            background-color: black;
+        }
+    </style>
 
-  .text-section p.italic {
-      font-style: italic;
-      color: #a89c8d;
-  }
-
-
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-      }
-      to {
-          opacity: 1;
-      }
-  }
-   
-  /* Adicionado para melhorar a responsividade */
-  @media (max-width: 768px) {
-    .main-content {
-      flex-direction: column;
-    }
-    .image-section {
-      padding-right: 0;
-    }
-    .text-section {
-      padding-left: 0;
-    }
-  }
-  /* a linha q divide o rodapé */
-  .linha-preta {
-      border: 0;
-      height: 1px;
-      background-color: black;}
-  </style>
-</head>
-
-
-
-<!-- inico do site -->
-<body>
-   
-  <div class="main-content">
-    <div class="text-content" id="quemsoueu">
-<!-- primeira parte -->
-    <section class="quemsoueu"></section>
-     
-      <h1>Entenda um pouco sobre mim</h1>
-      <p>
-        Me chamo Leonardo Zaia Silva, tenho 15 anos e estou cursando o técnico em Informática na ETEC. Sou uma pessoa que se adapta com facilidade e gosto de trabalhar em equipe. Sempre me empenho nas tarefas que me são atribuídas e procuro aprender constantemente para aprimorar minhas habilidades, especialmente no campo da tecnologia, 
-      </p>
-    </div>
-
-    <div class="image-content">
-      <img alt="Uma foto de Leonardo Zaia" height="400" src="img/Captura de tela 2024-09-12 100915.png" width="400" />
-    </div>
-  </div>
- </section>
-
-<!-- Aqui vai é a segunda parte -->
-  <div class="parte2" id="parte2">
+    <!-- inico do site -->
     <div class="container">
-      <div class="image-section">
-       <img alt="foto de leonardo" height="300" src="img/img02.jpg" width="400"/>
-      </div>
-      <div class="text-section">
-       <h1>
-       Minhas Experiências
-       </h1>
-       <p>
-        Ao longo do meu desenvolvimento, tive algumas experiências importantes. Em 2024, criei um site básico utilizando HTML e CSS, o que me permitiu aplicar na prática o que venho aprendendo. Também fiz um curso na Alura, onde tive contato com desenvolvimento web e programação visual com Scratch, o que foi uma experiência interessante, principalmente com a parte visual.
-       </p>
-      </div>
-     </div>
-    
-     <!-- aqui é a parte 3 -->
-     <div class="main-content" id="parte3">
-      <div class="text-content">
-        <h1>Habilidades</h1>
-        <p>
-          Entre as minhas habilidades, posso destacar conhecimento em HTML, CSS, noções de JavaScript, além de programação visual com Scratch e lógica de programação em Python. Também tenho familiaridade com metodologias ágeis como Kanban e Scrum, e ferramentas de modelagem como BPMN. Além disso, me sinto muito à vontade em trabalhar com outras pessoas, o que acredito ser uma característica importante para qualquer área.
-        </p>
-      </div>
-    
-      <div class="image-content">
-        <img alt="Uma foto de Leonardo Zaia" height="400" src="img/img01.jpg" width="400" />
-      </div>
+        <div class="parte1" id="parte1">
+            <h1>Entenda um pouco sobre mim</h1>
+            <p>Me chamo Leonardo Zaia Silva, tenho 15 anos e estou cursando o técnico em Informática na ETEC. Ainda estou no início do meu aprendizado, mas me adapto com facilidade e gosto de trabalhar em equipe. Sou dedicado e estou sempre buscando aprender mais, principalmente na área de tecnologia.</p>
+        </div>
+        <div class="image-content">
+            <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png" />
+        </div>
     </div>
-    
-    
-    
-    
-    
-    
-      <!-- aqui é a quarta parte -->
-    
-      <div class="parte4" id="parte4">
+
+    <div class="parte2" id="parte2">
         <div class="container">
-          <div class="image-section">
-           <img alt=" foto do leonardo" height="300" src="img/img02.jpg" width="400"/>
-          </div>
-          <div class="text-section">
-           <h1>
-            Educação
-           </h1>
-           <p>
-            Na ETEC, estou aprofundando meus conhecimentos em lógica de programação, aprendendo a programar em Python e explorando o uso de ferramentas de gestão de projetos como Kanban, Scrum e BPMN. Isso tem sido essencial para entender como organizar melhor o trabalho e os processos de desenvolvimento.
-           </p>
-          </div>
-         </div>
-    
-    
-          <!-- aqui vai os cards de for obrigatório -->
-     
-      
-    <!-- a linha q divide o rodapé -->
-          <hr class="linha-preta">
-    
-        <!-- rodapé -->
-       
-        <footer>
-          <!-- link do github -->
-          <a href="https://github.com/LeonardoZaia22">
-            <img src="img/imagem 4.jpg" alt="Ícone" style="width: 20px; height: 20px; margin-bottom: 12px; ">
-            Github de Leonardo Zaia
-          </a>
-<br>
-          <!-- link do instagram  -->
-          <a href="https://www.instagram.com/zaia_ls/">
-            <img src="img/imagem 5.png" alt="Ícone" style="width: 20px; height: 20px; margin-bottom: 12px; ">
-            Instagram de Leonardo Zaia
-          </a>
-        </footer>
+            <div class="image-section">
+                <img alt="foto de leonardo" src="img/img02.jpg"/>
+            </div>
+            <div class="text-section">
+                <h1>Minhas Experiências</h1>
+                <p>Tive a oportunidade de criar um site básico em 2024, usando HTML e CSS, o que foi meu primeiro projeto prático. Além disso, fiz um curso na Alura, onde aprendi sobre desenvolvimento web e programação visual com Scratch, focando mais na parte visual. No curso técnico da ETEC, estou aprendendo lógica de programação com Python e também estudando metodologias de gestão de projetos, como Kanban, Scrum e BPMN, que me ajudam a organizar melhor meu trabalho e colaborar com os colegas. Também estou me familiarizando com ferramentas como Photoshop e Illustrator para criação gráfica, além de utilizar comandos no CMD para tarefas mais técnicas.</p>
+            </div>
+        </div>
+    </div>
 
-        
+    <div class="parte3" id="parte3">
+        <div class="container">
+            <div class="text-section">
+                <h1>Habilidades</h1>
+                <p>Tenho conhecimento básico em HTML, CSS e JavaScript, noções de programação visual com Scratch e lógica de programação com Python. Além disso, possuo habilidades com Photoshop, Illustrator e o uso de comandos no CMD. Também tenho familiaridade com metodologias ágeis como Kanban, Scrum e BPMN. Gosto de trabalhar em equipe e me adaptar a novas situações.
 
-         <!-- Linkando js e bootstrap -->
-      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-    
-     
-    </body>
-    </html>
+                </p>
+            </div>
+            <div class="image-content">
+                <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="parte4" id="parte4">
+        <div class="container">
+            <div class="image-section">
+                <img alt="foto do leonardo" src="img/img02.jpg"/>
+            </div>
+            <div class="text-section">
+                <h1>Educação</h1>
+                
+                <p>- Ensino Fundamental Completo – 2023</p>
+                <p>- Curso na Alura – Desenvolvimento Web e Scratch (programação visual)</p>
+                <p>- Técnico em Informática (cursando) – ETEC</p>
+              
+              </div>
+        </div>
+    </div>
+
+    <hr class="linha-preta">
+
+    <footer>
+        <a href="https://github.com/LeonardoZaia22">
+            <img src="img/imagem 4.jpg" alt="Ícone" style="width: 20px; height: 20px;"> Github de Leonardo Zaia
+        </a>
+        <br>
+        <a href="https://www.instagram.com/zaia_ls/">
+            <img src="img/imagem 5.png" alt="Ícone" style="width: 20px; height: 20px;"> Instagram de Leonardo Zaia
+        </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
