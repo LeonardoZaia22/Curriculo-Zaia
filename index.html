@@ -7,177 +7,232 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet" />
-</head>
-<body>
+    <link rel="shortcut icon" href="img/img01.jpg" type="image/x-icon">
 
-<div class="container-fluid">
-    <header>
-        <!-- Menu de navegação-->
-        <nav class="navbar navbar-dark navbar-custom fixed-top" style="background-color: #8b8a89">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Currículo de Leonardo Zaia</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#quemsoueu">Sobre mim</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#parte2">Experiências</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#parte3">Habilidades</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#parte4">Educação</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- aqui é o css -->
+    <!-- css -->
+    
     <style>
-        
-
-        
-
-
-
+        /* Fundo */
         body {
-            margin: 45px;
-            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: rgb(235, 234, 234);
+            margin: 35px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa; 
+            line-height: 1.6; 
+          
         }
-
-
+    
         .header {
             text-align: center;
+            margin-bottom: 20px; 
         }
-
+    
         img {
-            margin-top: 8px;
-            border-radius: 6%;
+            margin-top: 15px; 
+            border-radius: 12px; 
             object-fit: cover;
-            height: 300px;
-            width: 290px;
+            height: 250px;
+            width: 100%; 
+            max-width: 220px; 
+            transition: transform 0.3s, box-shadow 0.3s; /*esse é o tempo que demora para a foto subir */
         }
-
-        .parte2 h2, .parte3 h2, .parte4 h2, .parte5 h2 {
+    
+        img:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 4px 15px rgb(173, 173, 235); 
+        }
+    
+        h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            margin: 10px 0;
+            font-size: 28px; 
+            margin: 15px 0; 
             text-align: center;
+            color: #00527c; 
+            
         }
-/* aqui é o fundo das partes */
+    
+        /* Cor dos parágrafos */
+        p {
+            color: #063161; 
+            font-size: 16px; 
+            margin: 10px 0; 
+        }
+    
+        /* Fundo das partes */
         .container {
             display: flex;
-            background-color: #d3d3d3;
+            background-color: #dfe9f5; 
             padding: 20px;
-            border-radius: 8px;
-            margin-top: 70px;
+            border-radius: 10px; 
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+            margin-top: 20px; 
+            transition: transform 0.2s; 
         }
-
+    
+        .container:hover {
+            transform: translateY(-4px); /* leve elevação ao passar o mouse */
+        }
+    
         .image-section {
             flex: 1;
             padding-right: 20px;
         }
-
+    
+        .text-section {
+            flex: 2; 
+        }
+    
         .text-section h1 {
-            font-size: 35px;
-            color: #3e3e3e;
+            font-size: 36px;
+            color: #00527c; 
             margin: 10px 0;
         }
-
+    
         @media (max-width: 768px) {
-            .main-content {
-                flex-direction: column;
+            .container {
+                flex-direction: column; 
             }
             .image-section {
                 padding-right: 0;
+                margin-bottom: 20px; 
             }
         }
+    
 
-        .linha-preta {
-            height: 2px;
-            background-color: black;
+    
+        footer {
+            padding: 15px;
+            font-size: 16px;
+            text-align: center; 
+            background-color: #f5f7fa;
+
+        }
+    
+        footer a {
+            color: #00527c; 
+            text-decoration: none; 
+        }
+    
+        footer a:hover {
+            color: #003d5b; /* cor ao passar o mouse */
+            text-decoration: underline; /* sublinhado ao passar o mouse */
         }
     </style>
+    
+    
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <header>
+            <!-- Menu de navegação-->
+            <nav class="navbar navbar-dark navbar-custom fixed-top" style="background-color: #00609c">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Currículo de Leonardo Zaia</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Alternar navegação">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#parte1">Sobre mim</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#parte2">Experiências</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#parte3">Habilidades</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#parte4">Educação</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-    <!-- inico do site -->
-    <div class="container">
+        <!-- inico do site -->
         <div class="parte1" id="parte1">
-            <h1>Entenda um pouco sobre mim</h1>
-            <p>Me chamo Leonardo Zaia Silva, tenho 15 anos e estou cursando o técnico em Informática na ETEC. Ainda estou no início do meu aprendizado, mas me adapto com facilidade e gosto de trabalhar em equipe. Sou dedicado e estou sempre buscando aprender mais, principalmente na área de tecnologia.</p>
+            <div class="container">
+                <div class="text-section">
+                    <h1>Entenda um pouco sobre mim</h1>
+                    <p>Me chamo Leonardo Zaia Silva, tenho 15 anos e estou cursando o técnico em Informática na ETEC. Ainda estou no início do meu aprendizado, mas me adapto com facilidade e gosto de trabalhar em equipe. Estou dedicado e estou sempre buscando aprender mais, principalmente na área de tecnologia.</p>
+                </div>
+                <div class="image-content">
+                    <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png"/>
+                </div>
+            </div>
         </div>
-        <div class="image-content">
-            <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png" />
+
+        <div class="parte2" id="parte2">
+            <div class="container">
+                <div class="image-section">
+                    <img alt="foto de leonardo" src="img/img02.jpg"/>
+                </div>
+                <div class="text-section">
+                    <h1>Minhas Experiências</h1>
+                    <p>Tive a oportunidade de criar um site básico em 2024, usando HTML e CSS, o que foi meu primeiro projeto prático. Além disso, fiz um curso na Alura, onde aprendi sobre desenvolvimento web e programação visual com Scratch, focando mais na parte técnica da ETEC, estou aprendendo lógica de programação com Python e também estudando metodologias de gestão de projetos, como Kanban, Scrum e BPMN, que me ajudam a organizar melhor meu trabalho e colaborar com os colegas. Também estou me familiarizando com ferramentas como Photoshop e Illustrator para criação gráfica, além de utilizar comandos no CMD para tarefas mais técnicas.</p>
+                </div>
+            </div>
         </div>
+
+        <div class="parte3" id="parte3">
+            <div class="container">
+                <div class="text-section">
+                    <h1>Habilidades</h1>
+                    <p>Tenho conhecimento básico em HTML, CSS e JavaScript, noções de programação visual com Scratch e lógica de programação com Python. Além disso, você possui habilidades com Photoshop, Illustrator e uso de comandos no CMD. Também tenho familiaridade com metodologias como Kanban, Scrum e BPMN. Gosto de trabalhar em equipe e me adaptar a novas situações.</p>
+                </div>
+                <div class="image-content">
+                    <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="parte4" id="parte4">
+            <div class="container">
+                <div class="image-section">
+                    <img alt="foto do leonardo" src="img/img02.jpg"/>
+                </div>
+                <div class="text-section">
+                    <h1>Educação</h1>
+                    <p>- Ensino Fundamental Completo – 2023</p>
+                    <p>- Curso na Alura – Desenvolvimento Web e Scratch (programação visual)</p>
+                    <p>- Técnico em Informática (cursando) – ETEC</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="linha">
+
+        <!-- rodapé -->
+        <footer class="footer mt-auto py-3" style="color: rgb(35, 55, 110);">
+            <div class="container text-center">
+                <!-- fale comigo -->
+                <div class="col-md-4 mb-3">
+                    <h5>Contato</h5>
+                    <p>Email: leonardo.zzaia22@gmail.com</p>
+                    <p>Telefone: (11) 91202-1649</p>
+                </div>
+                <!-- links -->
+                <div class="col-md-4 mb-3">
+                    <h5>Redes Sociais</h5>
+                    <a href="https://github.com/LeonardoZaia22" target="_blank" style="color: #00609c">
+                        <i class="fab fa-github" style="font-size: 20px;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/zaia_ls/" target="_blank" style="color:#00609c">
+                        <i class="fab fa-instagram" style="font-size: 20px;"></i>
+                    </a>
+                </div>
+                <!-- feito por-->
+                <div class="col-md-4 mb-3">
+                    <h5>&copy 2024 Leonardo Zaia</h5>
+                    <p>Todos os direitos reservados</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     </div>
-
-    <div class="parte2" id="parte2">
-        <div class="container">
-            <div class="image-section">
-                <img alt="foto de leonardo" src="img/img02.jpg"/>
-            </div>
-            <div class="text-section">
-                <h1>Minhas Experiências</h1>
-                <p>Tive a oportunidade de criar um site básico em 2024, usando HTML e CSS, o que foi meu primeiro projeto prático. Além disso, fiz um curso na Alura, onde aprendi sobre desenvolvimento web e programação visual com Scratch, focando mais na parte visual. No curso técnico da ETEC, estou aprendendo lógica de programação com Python e também estudando metodologias de gestão de projetos, como Kanban, Scrum e BPMN, que me ajudam a organizar melhor meu trabalho e colaborar com os colegas. Também estou me familiarizando com ferramentas como Photoshop e Illustrator para criação gráfica, além de utilizar comandos no CMD para tarefas mais técnicas.</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="parte3" id="parte3">
-        <div class="container">
-            <div class="text-section">
-                <h1>Habilidades</h1>
-                <p>Tenho conhecimento básico em HTML, CSS e JavaScript, noções de programação visual com Scratch e lógica de programação com Python. Além disso, possuo habilidades com Photoshop, Illustrator e o uso de comandos no CMD. Também tenho familiaridade com metodologias ágeis como Kanban, Scrum e BPMN. Gosto de trabalhar em equipe e me adaptar a novas situações.
-
-                </p>
-            </div>
-            <div class="image-content">
-                <img alt="Uma foto de Leonardo Zaia" src="img/Captura de tela 2024-09-12 100915.png"/>
-            </div>
-        </div>
-    </div>
-
-    <div class="parte4" id="parte4">
-        <div class="container">
-            <div class="image-section">
-                <img alt="foto do leonardo" src="img/img02.jpg"/>
-            </div>
-            <div class="text-section">
-                <h1>Educação</h1>
-                
-                <p>- Ensino Fundamental Completo – 2023</p>
-                <p>- Curso na Alura – Desenvolvimento Web e Scratch (programação visual)</p>
-                <p>- Técnico em Informática (cursando) – ETEC</p>
-              
-              </div>
-        </div>
-    </div>
-
-    <hr class="linha-preta">
-
-    <footer>
-        
-        <a href="https://github.com/LeonardoZaia22">
-            <img src="img/imagem 4.jpg" alt="Ícone" style="width: 30px; height: 30px;">
-        </a>
-         <p>Acesse também meu GitHub</p>
-       
-        <br>
-        <a href="https://www.instagram.com/zaia_ls/">
-            <img src="img/imagem 5.png" alt="Ícone" style="width: 30px; height: 30px;">
-        </a>
-        <p>Siga no Intagran</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-</div>
 </body>
 </html>
